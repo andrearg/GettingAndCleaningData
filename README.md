@@ -1,4 +1,6 @@
 # Getting And Cleaning Data Final Project
+
+##Description
 This is the final project of Getting and Cleaning Data
 The run_analysis.R file creates two tidy data sets.
 The data linked to from the course website represent data collected from the accelerometers from the Samsung Galaxy S smartphone. A full description is available at the site where the data was obtained:
@@ -18,10 +20,17 @@ The run_analysis.R that does the following.
 4. Appropriately labels the data set with descriptive variable names.
 5. From the data set in step 4, creates a second, independent tidy data set with the average of each variable for each activity and each subject.
 
+##Running the script
+Type the following in R enviroment:
+run_analyisis()
+
+##Results
 Two datasets are created
 - **Complete_Dataset.csv** is First Dataset containing all the data
 - **Average_datset.csv** is The dataset from setp 5 and the final tidy dataset
 
 The rows in **"Average_Dataset.csv"** contain Subject, Activity, and the Mean/Standard deviation of all features
+
+##Code Book
 The Code Book describes the the variables in "Average_datset.csv", the data, andtransformations or work that you performed to clean up the data 
 
