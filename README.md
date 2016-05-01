@@ -17,6 +17,7 @@ The run_analysis.R that does the following.
 4)Appropriately labels the data set with descriptive variable names.
 5)From the data set in step 4, creates a second, independent tidy data set with the average of each variable for each activity and each subject.
 
-The first data set created from steps 1-4 is called  Complete_Dataset
-The dataset from setp 5 is called Average_datset
+The first data set created from steps 1-4 is called  Complete_Dataset.csv
+
+The dataset from setp 5 is called Average_datset.csv
 
