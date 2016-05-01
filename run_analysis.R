@@ -56,5 +56,5 @@ run_analysis<-function(){
     
     write.csv(Dataset_1, "./Project/Complete_Dataset.csv")
     write.csv(Final_dataset, "./Project/Average_dataset.csv")
-    
+    write.table(Final_dataset, "./Project/Average_dataset.txt",row.name=FALSE) #create this file for final submission
       }
