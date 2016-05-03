@@ -27,10 +27,10 @@ run_analyisis()
 ##Results
 Two datasets are created
 - **Complete_Dataset.csv** is First Dataset containing all the data
-- **Average_datset.csv** is The dataset from setp 5 and the final tidy dataset
+- **Tidy_dataser.csv** is The dataset from setp 5 and the final tidy dataset
 
-The rows in **"Average_Dataset.csv"** contain Subject, Activity, and the Mean/Standard deviation of all features
+The rows in **"Tidy_dataset.csv"** contain Subject, Activity, and the Mean/Standard deviation of all features
 
 ##Code Book
-The Code Book describes the the variables in "Average_datset.csv", the data, andtransformations or work that you performed to clean up the data 
+The Code Book describes the the variables in "Tidy_datset.csv", the data, andtransformations or work that you performed to clean up the data 
 
