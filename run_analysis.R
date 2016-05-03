@@ -65,8 +65,8 @@ run_analysis<-function(){
     Final_dataset <- aggregate(Filtered_observations, list(Dataset_1$Subject_ID, Dataset_1$Activity), mean)
     names(Final_dataset)[1:2] <- c('Subject', 'Activity')
     
-    write.csv(Dataset_1, "./Project/Complete_Dataset.csv")
-    write.csv(Final_dataset, "./Project/Average_dataset.csv")
-    write.table(Final_dataset, "./Project/Tidy_dataset.txt",row.name=FALSE)
+    write.csv(Dataset_1, "./Project/Complete_Dataset.csv") #this is the intermediate dataser
+    write.csv(Final_dataset, "./Project/Tidy_dataset.csv") #this is the final dataset in CSV
+    write.table(Final_dataset, "./Project/Tidy_dataset.txt",row.name=FALSE) #final dataset for submission
     
       }
