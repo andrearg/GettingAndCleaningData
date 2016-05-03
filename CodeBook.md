@@ -1,4 +1,5 @@
-# Code Book - Average_Dataset.csv
+# Code Book 
+Tidy_dataset.txt
 
 Original data can be found in:
 https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip
@@ -19,73 +20,73 @@ Subject ID
 |  5|           STANDING|
 |  6|            LAYING|
 
-### Features
+### Selected Features (only Mean and STD features)
 
 | Number | Name |
 |---------:|:---------------:|
-|   1| tBodyAcc-mean()-X |
-|   2| tBodyAcc-mean()-Y |
-|   3| tBodyAcc-mean()-Z |
-|   4| tBodyAcc-std()-X |
-|   5| tBodyAcc-std()-Y |
-|   6| tBodyAcc-std()-Z |
-|  41| tGravityAcc-mean()-X |
-|  42| tGravityAcc-mean()-Y |
-|  43| tGravityAcc-mean()-Z |
-|  44| tGravityAcc-std()-X |
-|  45| tGravityAcc-std()-Y |
-|  46| tGravityAcc-std()-Z |
-|  81| tBodyAccJerk-mean()-X |
-|  82| tBodyAccJerk-mean()-Y |
-|  83| tBodyAccJerk-mean()-Z |
-|  84| tBodyAccJerk-std()-X |
-|  85| tBodyAccJerk-std()-Y |
-|  86| tBodyAccJerk-std()-Z |
-| 121| tBodyGyro-mean()-X |
-| 122| tBodyGyro-mean()-Y |
-| 123| tBodyGyro-mean()-Z |
-| 124| tBodyGyro-std()-X |
-| 125| tBodyGyro-std()-Y |
-| 126| tBodyGyro-std()-Z |
-| 161| tBodyGyroJerk-mean()-X |
-| 162| tBodyGyroJerk-mean()-Y |
-| 163| tBodyGyroJerk-mean()-Z |
-| 164| tBodyGyroJerk-std()-X |
-| 165| tBodyGyroJerk-std()-Y |
-| 166| tBodyGyroJerk-std()-Z |
-| 201| tBodyAccMag-mean() |
-| 202| tBodyAccMag-std() |
-| 214| tGravityAccMag-mean() |
-| 215| tGravityAccMag-std() |
-| 227| tBodyAccJerkMag-mean() |
-| 228| tBodyAccJerkMag-std() |
-| 240| tBodyGyroMag-mean() |
-| 241| tBodyGyroMag-std() |
-| 253| tBodyGyroJerkMag-mean() |
-| 254| tBodyGyroJerkMag-std() |
-| 266| fBodyAcc-mean()-X |
-| 267| fBodyAcc-mean()-Y |
-| 268| fBodyAcc-mean()-Z |
-| 269| fBodyAcc-std()-X |
-| 270| fBodyAcc-std()-Y |
-| 271| fBodyAcc-std()-Z |
-| 345| fBodyAccJerk-mean()-X |
-| 346| fBodyAccJerk-mean()-Y |
-| 347| fBodyAccJerk-mean()-Z |
-| 348| fBodyAccJerk-std()-X |
-| 349| fBodyAccJerk-std()-Y |
-| 350| fBodyAccJerk-std()-Z |
-| 424| fBodyGyro-mean()-X |
-| 425| fBodyGyro-mean()-Y |
-| 426| fBodyGyro-mean()-Z |
-| 427| fBodyGyro-std()-X |
-| 428| fBodyGyro-std()-Y |
-| 429| fBodyGyro-std()-Z |
-| 503| fBodyAccMag-mean() |
-| 504| fBodyAccMag-std() |
-| 516| fBodyBodyAccJerkMag-mean() |
-| 517| fBodyBodyAccJerkMag-std() |
-| 529| fBodyBodyGyroMag-mean() |
-| 530| fBodyBodyGyroMag-std() |
-| 542| fBodyBodyGyroJerkMag-mean() |
-| 543| fBodyBodyGyroJerkMag-std() |
+|	1	|	T-BodyAccMeanX	|
+|	2	|	T-BodyAccMeanY	|
+|	3	|	T-BodyAccMeanZ	|
+|	4	|	T-BodyAccStdX	|
+|	5	|	T-BodyAccStdY	|
+|	6	|	T-BodyAccStdZ	|
+|	7	|	T-GravityAccMeanX	|
+|	8	|	T-GravityAccMeanY	|
+|	9	|	T-GravityAccMeanZ	|
+|	10	|	T-GravityAccStdX	|
+|	11	|	T-GravityAccStdY	|
+|	12	|	T-GravityAccStdZ	|
+|	13	|	T-BodyAccJerkMeanX	|
+|	14	|	T-BodyAccJerkMeanY	|
+|	15	|	T-BodyAccJerkMeanZ	|
+|	16	|	T-BodyAccJerkStdX	|
+|	17	|	T-BodyAccJerkStdY	|
+|	18	|	T-BodyAccJerkStdZ	|
+|	19	|	T-BodyGyroMeanX	|
+|	20	|	T-BodyGyroMeanY	|
+|	21	|	T-BodyGyroMeanZ	|
+|	22	|	T-BodyGyroStdX	|
+|	23	|	T-BodyGyroStdY	|
+|	24	|	T-BodyGyroStdZ	|
+|	25	|	T-BodyGyroJerkMeanX	|
+|	26	|	T-BodyGyroJerkMeanY	|
+|	27	|	T-BodyGyroJerkMeanZ	|
+|	28	|	T-BodyGyroJerkStdX	|
+|	29	|	T-BodyGyroJerkStdY	|
+|	30	|	T-BodyGyroJerkStdZ	|
+|	31	|	T-BodyAccMagMean	|
+|	32	|	T-BodyAccMagStd	|
+|	33	|	T-GravityAccMagMean	|
+|	34	|	T-GravityAccMagStd	|
+|	35	|	T-BodyAccJerkMagMean	|
+|	36	|	T-BodyAccJerkMagStd	|
+|	37	|	T-BodyGyroMagMean	|
+|	38	|	T-BodyGyroMagStd	|
+|	39	|	T-BodyGyroJerkMagMean	|
+|	40	|	T-BodyGyroJerkMagStd	|
+|	41	|	F-BodyAccMeanX	|
+|	42	|	F-BodyAccMeanY	|
+|	43	|	F-BodyAccMeanZ	|
+|	44	|	F-BodyAccStdX	|
+|	45	|	F-BodyAccStdY	|
+|	46	|	F-BodyAccStdZ	|
+|	47	|	F-BodyAccJerkMeanX	|
+|	48	|	F-BodyAccJerkMeanY	|
+|	49	|	F-BodyAccJerkMeanZ	|
+|	50	|	F-BodyAccJerkStdX	|
+|	51	|	F-BodyAccJerkStdY	|
+|	52	|	F-BodyAccJerkStdZ	|
+|	53	|	F-BodyGyroMeanX	|
+|	54	|	F-BodyGyroMeanY	|
+|	55	|	F-BodyGyroMeanZ	|
+|	56	|	F-BodyGyroStdX	|
+|	57	|	F-BodyGyroStdY	|
+|	58	|	F-BodyGyroStdZ	|
+|	59	|	F-BodyAccMagMean	|
+|	60	|	F-BodyAccMagStd	|
+|	61	|	F-BodyAccJerkMagMean	|
+|	62	|	F-BodyAccJerkMagStd	|
+|	63	|	F-BodyGyroMagMean	|
+|	64	|	F-BodyGyroMagStd	|
+|	65	|	F-BodyGyroJerkMagMean	|
+|	66	|	F-BodyGyroJerkMagStd	|
