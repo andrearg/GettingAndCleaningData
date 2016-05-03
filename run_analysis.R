@@ -1,6 +1,7 @@
 
 run_analysis<-function(){
 
+  library(dplyr)
   #creating dircetory
   if(!file.exists("Project")){         
   dir.create("Project")}
@@ -32,9 +33,19 @@ run_analysis<-function(){
   #2 Extracts only the measurements on the mean and standard deviation for each measurement
     #Reading features to select mean and std data
     features<-read.table("./Project/UCI HAR Dataset/features.txt",header=FALSE, col.names=c('ID', 'Name'))
-    features_filtered<-grep('mean\\(\\)|-std\\(\\)',features$Name)
-    X_data2<-X_data[,features_filtered] 
-    names(X_data2) <- features[features$ID %in% features_filtered, 2] 
+    features_filtered<-grep('mean\\(\\)|std\\(\\)',features$Name)
+    Filtered_observations<-X_data[,features_filtered] 
+    names(Filtered_observations) <- features[features$ID %in% features_filtered, 2] 
+    
+    #renaming those long names
+    newNames=names(Filtered_observations)
+    newNames <- gsub(pattern="-?mean[(][)]-?",replacement=".Mean.",x=newNames)
+    newNames <- gsub(pattern="-?std[()][)]-?",replacement=".Std.",x=newNames)
+    newNames <- gsub(pattern="-?meanFreq[()][)]-?",replacement="MeanFreq",x=newNames)
+    newNames <- gsub(pattern="^t",replacement="T-",x=newNames)
+    newNames <- gsub(pattern="^f",replacement="F-",x=newNames)
+    newNames <- gsub(pattern="BodyBody",replacement="Body",x=newNames)
+    names(Filtered_observations)=newNames
   
   #3 Uses descriptive activity names to name the activities in the data set
     #Reading activity labels
@@ -46,15 +57,16 @@ run_analysis<-function(){
     names(Y_data) <- "Activity"  
     
     ## Creating First Tidy Data Set
-    Dataset_1<-cbind(SubjectID,Y_data,X_data2)
+    Dataset_1<-cbind(SubjectID,Y_data,Filtered_observations)
     
   #5 From the data set in step 4, creates a second, independent tidy data set with the average of each variable 
   #for each activity and each subject.  
 
-    Final_dataset <- aggregate(X_data2, list(Dataset_1$Subject_ID, Dataset_1$Activity), mean)
+    Final_dataset <- aggregate(Filtered_observations, list(Dataset_1$Subject_ID, Dataset_1$Activity), mean)
     names(Final_dataset)[1:2] <- c('Subject', 'Activity')
     
     write.csv(Dataset_1, "./Project/Complete_Dataset.csv")
     write.csv(Final_dataset, "./Project/Average_dataset.csv")
-    write.table(Final_dataset, "./Project/Average_dataset.txt",row.name=FALSE) #create this file for final submission
+    write.table(Final_dataset, "./Project/Tidy_dataset.txt",row.name=FALSE)
+    
       }
